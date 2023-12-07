@@ -1,0 +1,25 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf test-results && rimraf playwright-report",
+    "test": "npm run clean && npx playwright test --project=chromium --config=playwright.config.ts",
+    "reinstall": "npx playwright install",
+    "play-report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "playwright": "^1.39.0",
+    "rimraf": "^4.1.2"
+  }
+}
