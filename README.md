@@ -45,3 +45,23 @@ npm run reinstall
 ```
 
 To download the latest versions of the Browsers.
+
+# Trigger GitHub Actions Workflow
+
+To manually trigger a GitHub Actions workflow run, you can use cURL with the GitHub API. Follow the steps below:
+
+1. Copy and paste the following cURL command into your terminal:
+
+    ```bash
+    curl -H "Accept: application/vnd.github.everest-preview+json" \
+        -H "Authorization: token YOUR_PERSONAL_ACCESS_TOKEN" \
+        --request POST \
+        --data '{"event_type": "run"}' \
+        https://api.github.com/repos/YOUR_USERNAME/YOUR_REPOSITORY/dispatches
+    ```
+
+   Make sure to replace `YOUR_PERSONAL_ACCESS_TOKEN` with your GitHub personal access token and `YOUR_USERNAME/YOUR_REPOSITORY` with your GitHub username and repository name.
+
+2. Execute the cURL command in your terminal.
+
+This command will trigger a GitHub Actions workflow run for the specified repository.
